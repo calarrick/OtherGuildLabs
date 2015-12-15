@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<product>
+    <product_type>Carpet</product_type>
+    <cost_per_square_foot>2.25</cost_per_square_foot>
+    <labor_cost_per_square_foot>2.10</labor_cost_per_square_foot>
+</product>
+<product>
+    <product_type>Laminate</product_type>
+    <cost_per_square_foot>1.75</cost_per_square_foot>
+    <labor_cost_per_square_foot>2.10</labor_cost_per_square_foot>
+</product>
+<product>
+    <product_type>Tile</product_type>
+    <cost_per_square_foot>3.50</cost_per_square_foot>
+    <labor_cost_per_square_foot>4.15</labor_cost_per_square_foot>
+</product>
+<product>
+    <product_type>Wood</product_type>
+    <cost_per_square_foot>5.15</cost_per_square_foot>
+    <labor_cost_per_square_foot>4.75</labor_cost_per_square_foot>
+</product>

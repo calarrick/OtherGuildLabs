@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<state>
+    <name>OH</name>
+    <tax_rate>6.25</tax_rate>
+</state>
+<state>
+    <name>PA</name>
+    <tax_rate>6.75</tax_rate>
+</state>
+<state>
+    <name>MI</name>
+    <tax_rate>5.75</tax_rate>
+</state>
+<state>
+    <name>IN</name>
+    <tax_rate>6.00</tax_rate>
+</state>

@@ -1,0 +1,222 @@
+CREATE DATABASE  IF NOT EXISTS `address_book` DEFAULT CHARACTER SET utf8;
+USE `address_book`;
+
+-- Table structure for table `Addresses`
+--
+
+DROP TABLE IF EXISTS `Addresses`;
+
+CREATE TABLE `Addresses` (
+  `address_id` int(11) NOT NULL AUTO_INCREMENT,
+  `last_name` varchar(255) COLLATE utf8_bin NOT NULL,
+  `street_num` varchar(255) COLLATE utf8_bin NOT NULL,
+  `street_name` varchar(255) COLLATE utf8_bin NOT NULL,
+  `apt_num` varchar(255) COLLATE utf8_bin NOT NULL,
+  `city_name` varchar(255) COLLATE utf8_bin NOT NULL,
+  `state_name` varchar(255) COLLATE utf8_bin NOT NULL,
+  `zip_code` varchar(15) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`address_id`),
+  KEY `l_name_index` (`last_name`),
+  KEY `c_name_index` (`city_name`),
+  KEY `z_code_index` (`zip_code`)
+) ENGINE=InnoDB AUTO_INCREMENT=116 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+
+--
+-- Dumping data for table `Addresses`
+--
+
+LOCK TABLES `Addresses` WRITE;
+ALTER TABLE `Addresses` DISABLE KEYS;
+INSERT INTO `Addresses` VALUES (113,'Testerson','123','Sesame St.','9','New York','NY','10026'),(114,'Plumb-Larrick','3322','Chalfant','','Shaker Heights','OH','44120');
+ALTER TABLE `Addresses` ENABLE KEYS;
+UNLOCK TABLES;
+
+
+
+DROP TABLE IF EXISTS `Addresses`;
+
+CREATE TABLE `Addresses` (
+  `address_id` int(11) NOT NULL AUTO_INCREMENT,
+  `last_name` varchar(255) COLLATE utf8_bin NOT NULL,
+  `street_num` varchar(255) COLLATE utf8_bin NOT NULL,
+  `street_name` varchar(255) COLLATE utf8_bin NOT NULL,
+  `apt_num` varchar(255) COLLATE utf8_bin NOT NULL,
+  `city_name` varchar(255) COLLATE utf8_bin NOT NULL,
+  `state_name` varchar(255) COLLATE utf8_bin NOT NULL,
+  `zip_code` varchar(15) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`address_id`),
+  KEY `l_name_index` (`last_name`),
+  KEY `c_name_index` (`city_name`),
+  KEY `z_code_index` (`zip_code`)
+) ENGINE=InnoDB AUTO_INCREMENT=116 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+
+--
+-- Dumping data for table `Addresses`
+--
+
+LOCK TABLES `Addresses` WRITE;
+ALTER TABLE `Addresses` DISABLE KEYS;
+INSERT INTO `Addresses` VALUES (113,'Testerson','123','Sesame St.','9','New York','NY','10026'),(114,'Plumb-Larrick','3322','Chalfant','','Shaker Heights','OH','44120');
+ALTER TABLE `Addresses` ENABLE KEYS;
+UNLOCK TABLES;
+
+
+-- Dump completed on 2015-12-10 13:29:07
+
+DROP TABLE IF EXISTS `Email_addresses`;
+
+CREATE TABLE `Email_addresses` (
+  `email_id` int(11) NOT NULL AUTO_INCREMENT,
+  `email_address` varchar(255) COLLATE utf8_bin NOT NULL,
+  `address_id` int(11) NOT NULL,
+  PRIMARY KEY (`email_id`),
+  KEY `fk_email_address_id` (`address_id`),
+  CONSTRAINT `fk_email_address_id` FOREIGN KEY (`address_id`) REFERENCES `Addresses` (`address_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+
+--
+-- Dumping data for table `Email_addresses`
+--
+
+LOCK TABLES `Email_addresses` WRITE;
+ALTER TABLE `Email_addresses` DISABLE KEYS;
+INSERT INTO `Email_addresses` VALUES (13,'asdf@asdf.com',113),(14,'a@b.com',114),(15,' b@c.com',114);
+/ALTER TABLE `Email_addresses` ENABLE KEYS;
+UNLOCK TABLES;
+
+
+-- Dump completed on 2015-12-10 13:29:07
+DROP TABLE IF EXISTS `Addresses`;
+
+CREATE TABLE `Addresses` (
+  `address_id` int(11) NOT NULL AUTO_INCREMENT,
+  `last_name` varchar(255) COLLATE utf8_bin NOT NULL,
+  `street_num` varchar(255) COLLATE utf8_bin NOT NULL,
+  `street_name` varchar(255) COLLATE utf8_bin NOT NULL,
+  `apt_num` varchar(255) COLLATE utf8_bin NOT NULL,
+  `city_name` varchar(255) COLLATE utf8_bin NOT NULL,
+  `state_name` varchar(255) COLLATE utf8_bin NOT NULL,
+  `zip_code` varchar(15) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`address_id`),
+  KEY `l_name_index` (`last_name`),
+  KEY `c_name_index` (`city_name`),
+  KEY `z_code_index` (`zip_code`)
+) ENGINE=InnoDB AUTO_INCREMENT=116 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+
+--
+-- Dumping data for table `Addresses`
+--
+
+LOCK TABLES `Addresses` WRITE;
+ALTER TABLE `Addresses` DISABLE KEYS;
+INSERT INTO `Addresses` VALUES (113,'Testerson','123','Sesame St.','9','New York','NY','10026'),(114,'Plumb-Larrick','3322','Chalfant','','Shaker Heights','OH','44120');
+ALTER TABLE `Addresses` ENABLE KEYS;
+UNLOCK TABLES;
+
+-- Dump completed on 2015-12-10 13:29:07
+
+DROP TABLE IF EXISTS `Addresses`;
+
+CREATE TABLE `Addresses` (
+  `address_id` int(11) NOT NULL AUTO_INCREMENT,
+  `last_name` varchar(255) COLLATE utf8_bin NOT NULL,
+  `street_num` varchar(255) COLLATE utf8_bin NOT NULL,
+  `street_name` varchar(255) COLLATE utf8_bin NOT NULL,
+  `apt_num` varchar(255) COLLATE utf8_bin NOT NULL,
+  `city_name` varchar(255) COLLATE utf8_bin NOT NULL,
+  `state_name` varchar(255) COLLATE utf8_bin NOT NULL,
+  `zip_code` varchar(15) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`address_id`),
+  KEY `l_name_index` (`last_name`),
+  KEY `c_name_index` (`city_name`),
+  KEY `z_code_index` (`zip_code`)
+) ENGINE=InnoDB AUTO_INCREMENT=116 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+
+--
+-- Dumping data for table `Addresses`
+--
+
+LOCK TABLES `Addresses` WRITE;
+ALTER TABLE `Addresses` DISABLE KEYS;
+INSERT INTO `Addresses` VALUES (113,'Testerson','123','Sesame St.','9','New York','NY','10026'),(114,'Plumb-Larrick','3322','Chalfant','','Shaker Heights','OH','44120');
+ALTER TABLE `Addresses` ENABLE KEYS;
+UNLOCK TABLES;
+
+
+-- Dump completed on 2015-12-10 13:29:07
+
+DROP TABLE IF EXISTS `Email_addresses`;
+CREATE TABLE `Email_addresses` (
+  `email_id` int(11) NOT NULL AUTO_INCREMENT,
+  `email_address` varchar(255) COLLATE utf8_bin NOT NULL,
+  `address_id` int(11) NOT NULL,
+  PRIMARY KEY (`email_id`),
+  KEY `fk_email_address_id` (`address_id`),
+  CONSTRAINT `fk_email_address_id` FOREIGN KEY (`address_id`) REFERENCES `Addresses` (`address_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+
+--
+-- Dumping data for table `Email_addresses`
+--
+
+LOCK TABLES `Email_addresses` WRITE;
+ALTER TABLE `Email_addresses` DISABLE KEYS;
+INSERT INTO `Email_addresses` VALUES (13,'asdf@asdf.com',113),(14,'a@b.com',114),(15,' b@c.com',114);
+ALTER TABLE `Email_addresses` ENABLE KEYS;
+UNLOCK TABLES;
+
+
+-- Dump completed on 2015-12-10 13:29:07
+
+DROP TABLE IF EXISTS `First_names`;
+
+CREATE TABLE `First_names` (
+  `f_name_id` int(11) NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(255) COLLATE utf8_bin NOT NULL,
+  `address_id` int(11) NOT NULL,
+  PRIMARY KEY (`f_name_id`),
+  KEY `fk_fname_address_id` (`address_id`),
+  CONSTRAINT `fk_fname_address_id` FOREIGN KEY (`address_id`) REFERENCES `Addresses` (`address_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Dumping data for table `First_names`
+--
+
+LOCK TABLES `First_names` WRITE;
+ALTER TABLE `First_names` DISABLE KEYS;
+INSERT INTO `First_names` VALUES (24,'Testy',113),(25,' Tester',113),(26,'Andrew',114),(27,' Abigail',114),(28,' Rosie',114),(29,' Levi',114);
+ALTER TABLE `First_names` ENABLE KEYS;
+UNLOCK TABLES;
+
+
+-- Dump completed on 2015-12-10 13:29:07
+
+DROP TABLE IF EXISTS `Phone_numbers`;
+
+CREATE TABLE `Phone_numbers` (
+  `address_id` int(11) NOT NULL AUTO_INCREMENT,
+  `phone_num` varchar(20) COLLATE utf8_bin NOT NULL,
+  KEY `fk_phonenum_address_id` (`address_id`),
+  CONSTRAINT `fk_phonenum_address_id` FOREIGN KEY (`address_id`) REFERENCES `Addresses` (`address_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=116 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+
+--
+-- Dumping data for table `Phone_numbers`
+--
+
+LOCK TABLES `Phone_numbers` WRITE;
+ALTER TABLE `Phone_numbers` DISABLE KEYS;
+INSERT INTO `Phone_numbers` VALUES (113,'1231231233'),(114,'1231231233');
+ALTER TABLE `Phone_numbers` ENABLE KEYS;
+UNLOCK TABLES;
+
+
+-- Dump completed on 2015-12-10 13:29:07
